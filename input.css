@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.App {
+  background: url("/assets/Catpuccin.png") no-repeat;
+  background-size: cover;
+}
+
+.card {
+  background: rgba(230, 233, 239, 0.57);
+  backdrop-filter: blur(5px);
+  padding: 45px;
+}
+
+.quote{
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-weight: 700;
+}
+.btn_g{
+  background-color: #dc8a78;
+  padding-left: 1.25rem; /* 20px */
+  padding-right: 1.25rem; /* 20px */
+  padding-top: 1rem; /* 16px */
+  padding-bottom: 1rem; /* 16px */
+  margin-top: 1.25rem; /* 20px */
+  color: black;
+}
+
+
