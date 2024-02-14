@@ -1,0 +1,23 @@
+os: unstable
+cache:
+  - node_modules
+environment:
+  GH_TOKEN:
+      secure: 0w5ezdOXK4n8qeg3oZ7HZuFOHJvdksLwd9/6YNj3xn3lrYTERRvQPUB7Ytfw3Qh4
+  matrix:
+    - nodejs_version: 7
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - set CI=true
+  - npm install -g npm@latest
+  - set PATH=%APPDATA%\npm;%PATH%
+  - npm install
+  - npm install @electron-forge/cli
+matrix:
+  fast_finish: true
+build: off
+version: '{build}'
+shallow_clone: true
+clone_depth: 1
+test_script:
+  - npm run ebw
